@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=8.2.0",
         "classpreloader/classpreloader": "~1.0.2",
         "d11wtq/boris": "~1.0",
         "ircmaxell/password-compat": "~1.0",
@@ -19,7 +19,7 @@
         "monolog/monolog": "~1.6",
         "nesbot/carbon": "~1.0",
         "patchwork/utf8": "~1.1",
-        "phpseclib/phpseclib": "0.3.*",
+        "phpseclib/phpseclib": "~2.0",
         "predis/predis": "0.8.*",
         "stack/builder": "~1.0",
         "swiftmailer/swiftmailer": "~5.1",
@@ -92,5 +92,10 @@
     "suggest": {
         "doctrine/dbal": "Allow renaming columns and dropping SQLite columns."
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
 }
