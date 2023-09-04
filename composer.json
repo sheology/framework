@@ -60,7 +60,7 @@
         "illuminate/remote": "self.version",
         "illuminate/routing": "self.version",
         "illuminate/session": "self.version",
-        "illuminate/support": "dev-5.8-php82",
+        "illuminate/support": "self.version",
         "illuminate/translation": "self.version",
         "illuminate/validation": "self.version",
         "illuminate/view": "self.version",
@@ -73,12 +73,6 @@
         "mockery/mockery": "~0.9",
         "phpunit/phpunit": "~4.0"
     },
-	"repositories": [
-        {
-            "url": "https://github.com/villagepay/support",
-            "type": "git"
-        }
-	],
     "autoload": {
         "classmap": [
             "src/Illuminate/Queue/IlluminateQueueClosure.php"
