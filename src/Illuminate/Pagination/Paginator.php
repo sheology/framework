@@ -454,7 +454,7 @@ class Paginator implements ArrayableInterface, ArrayAccess, Countable, IteratorA
 	 *
 	 * @return int
 	 */
-	public function count()
+	public function count(): int
 	{
 		return count($this->items);
 	}
