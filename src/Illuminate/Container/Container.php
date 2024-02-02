@@ -608,7 +608,11 @@ class Container implements ArrayAccess {
 	{
 		try
 		{
-			return $this->make($parameter->getClass()->name);
+			$dependency = $parameter->getType() && !$parameter->getType()->isBuiltin()
+				? new \ReflectionClass($parameter->getType()->getName())
+				: null;
+
+			return $dependency ? $this->make($dependency->name) : null;
 		}
 
 		// If we can not resolve the class instance, we will check to see if the value

@@ -316,7 +316,11 @@ class Handler {
 
 		$expected = $parameters[0];
 
-		return ! $expected->getClass() || $expected->getClass()->isInstance($exception);
+		$class = $expected->getType() && !$expected->getType()->isBuiltin()
+			? new \ReflectionClass($expected->getType()->getName())
+			: null;
+
+		return ! $class || $class->isInstance($exception);
 	}
 
 	/**
