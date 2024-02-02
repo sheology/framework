@@ -772,7 +772,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	 * @param  mixed  $key
 	 * @return bool
 	 */
-	public function offsetExists($key)
+	public function offsetExists($key): bool
 	{
 		return array_key_exists($key, $this->items);
 	}
@@ -783,7 +783,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	 * @param  mixed  $key
 	 * @return mixed
 	 */
-	public function offsetGet($key)
+	public function offsetGet($key): mixed
 	{
 		return $this->items[$key];
 	}
@@ -795,7 +795,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	 * @param  mixed  $value
 	 * @return void
 	 */
-	public function offsetSet($key, $value)
+	public function offsetSet($key, $value): void
 	{
 		if (is_null($key))
 		{
@@ -813,7 +813,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	 * @param  string  $key
 	 * @return void
 	 */
-	public function offsetUnset($key)
+	public function offsetUnset($key): void
 	{
 		unset($this->items[$key]);
 	}
