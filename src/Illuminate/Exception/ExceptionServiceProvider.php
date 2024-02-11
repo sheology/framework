@@ -153,7 +153,7 @@ class ExceptionServiceProvider extends ServiceProvider {
 	{
 		$this->app['whoops.handler'] = $this->app->share(function()
 		{
-			with($handler = new PrettyPageHandler)->setEditor('sublime');
+			with($handler = new PrettyPageHandler)->setEditor('phpstorm');
 
 			return $handler;
 		});
