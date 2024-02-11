@@ -80,7 +80,7 @@ class FileSessionHandler implements \SessionHandlerInterface {
 	/**
 	 * {@inheritDoc}
 	 */
-	public function gc($lifetime): bool
+	public function gc($lifetime): int|false
 	{
 		$files = Finder::create()
 					->in($this->path)
