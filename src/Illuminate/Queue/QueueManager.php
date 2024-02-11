@@ -19,6 +19,13 @@ class QueueManager {
 	protected $connections = array();
 
 	/**
+	 * The array of driver connectors.
+	 *
+	 * @var array
+	 */
+	protected $connectors = array();
+
+	/**
 	 * Create a new queue manager instance.
 	 *
 	 * @param  \Illuminate\Foundation\Application  $app
